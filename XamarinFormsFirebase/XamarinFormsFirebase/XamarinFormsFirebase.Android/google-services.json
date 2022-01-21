@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "249836833607-oed878tidimgjvm2n16sbdmj7ejjb43q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ve.xamarinformfirebase.xamarinformsfirebase",
+            "certificate_hash": "119d33ca2828dbe6e32e2d2bee99b987c563455a"
+          }
+        },
+        {
           "client_id": "249836833607-v03pbim1okrg3ppn2uofipffqtu1aom0.apps.googleusercontent.com",
           "client_type": 3
         }
