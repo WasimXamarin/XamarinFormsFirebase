@@ -17,6 +17,8 @@
     <None Remove="Acr.UserDialogs" />
     <None Remove="Views\MobileNumberView\" />
     <None Remove="ViewModels\MobileNumberViewModel\" />
+    <None Remove="ViewModels\GoogleLogin\" />
+    <None Remove="Views\GmailLoginView\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\RegistrationView\" />
@@ -24,5 +26,7 @@
     <Folder Include="ConstantFunction\" />
     <Folder Include="Views\MobileNumberView\" />
     <Folder Include="ViewModels\MobileNumberViewModel\" />
+    <Folder Include="ViewModels\GmailLoginViewModel\" />
+    <Folder Include="Views\GmailLoginView\" />
   </ItemGroup>
 </Project>
