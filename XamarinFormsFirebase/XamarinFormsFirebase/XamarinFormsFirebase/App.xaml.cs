@@ -6,6 +6,7 @@ using XamarinFormsFirebase.Views;
 using Xamarin.Essentials;
 using XamarinFormsFirebase.Views.RegistrationView;
 using XamarinFormsFirebase.Views.MobileNumberView;
+using XamarinFormsFirebase.Views.GmailLoginView;
 
 namespace XamarinFormsFirebase
 {
@@ -19,7 +20,7 @@ namespace XamarinFormsFirebase
             firebaseAuth = DependencyService.Get<IFirebaseAuth>();
             DependencyService.Register<MockDataStore>();
 
-            MainPage = new MobileNumberLogInPage();
+            MainPage = new GmailLogInPage();
 
             //if(firebaseAuth.IsSignIn())
             //{
