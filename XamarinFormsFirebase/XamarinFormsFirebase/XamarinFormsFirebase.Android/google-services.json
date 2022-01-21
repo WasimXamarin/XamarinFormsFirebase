@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "249836833607",
+    "project_id": "fir-xanarinforms",
+    "storage_bucket": "fir-xanarinforms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249836833607:android:e339578fc3fcc08fc65a62",
+        "android_client_info": {
+          "package_name": "com.ve.xamarinformfirebase.xamarinformsfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249836833607-v03pbim1okrg3ppn2uofipffqtu1aom0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5kLGHAoqi3y71EddZuJfYgjd9h5YgMOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249836833607-v03pbim1okrg3ppn2uofipffqtu1aom0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "249836833607-k4ic8b5krv7mrd0se7mn35nsldh60e0n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ve.XamarinFormFirebase.XamarinFormsFirebase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

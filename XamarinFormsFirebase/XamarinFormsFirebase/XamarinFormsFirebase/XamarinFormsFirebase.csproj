@@ -8,5 +8,21 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\RegistrationView\" />
+    <None Remove="ViewModels\RegistrationViewModel\" />
+    <None Remove="ConstantFunction\" />
+    <None Remove="Acr.UserDialogs" />
+    <None Remove="Views\MobileNumberView\" />
+    <None Remove="ViewModels\MobileNumberViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\RegistrationView\" />
+    <Folder Include="ViewModels\RegistrationViewModel\" />
+    <Folder Include="ConstantFunction\" />
+    <Folder Include="Views\MobileNumberView\" />
+    <Folder Include="ViewModels\MobileNumberViewModel\" />
   </ItemGroup>
 </Project>
