@@ -9,6 +9,8 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
+    <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\RegistrationView\" />
@@ -19,6 +21,11 @@
     <None Remove="ViewModels\MobileNumberViewModel\" />
     <None Remove="ViewModels\GoogleLogin\" />
     <None Remove="Views\GmailLoginView\" />
+    <None Remove="Views\GoogleLoginPage\" />
+    <None Remove="ViewModels\GoogleLoginViewModel\" />
+    <None Remove="Xamarin.Auth" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="AuthHelper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\RegistrationView\" />
@@ -28,5 +35,8 @@
     <Folder Include="ViewModels\MobileNumberViewModel\" />
     <Folder Include="ViewModels\GmailLoginViewModel\" />
     <Folder Include="Views\GmailLoginView\" />
+    <Folder Include="Views\GoogleLoginView\" />
+    <Folder Include="ViewModels\GoogleLoginViewModel\" />
+    <Folder Include="AuthHelper\" />
   </ItemGroup>
 </Project>
