@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+    <key>NSAllowsArbitraryLoadsInWebContent</key>
+     <true/>
+</dict>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -21,7 +28,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>14.3</string>
+	<string>14.4</string>
 	<key>CFBundleDisplayName</key>
 	<string>XamarinFormsFirebase</string>
 	<key>CFBundleIdentifier</key>
@@ -42,6 +49,14 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.249836833607-k4ic8b5krv7mrd0se7mn35nsldh60e0n</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Xamarin.Auth Google PAuth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.249836833607-mksm0eil4699ljcl57ccp1ivrpv3dq7g</string>
 			</array>
 		</dict>
 	</array>

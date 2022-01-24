@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsFirebase.Views.GoogleLoginView.GoogleloginPage"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    iOS:Page.UseSafeArea="True"
+    Title="{x:Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="{x:Binding Title}"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="{x:Binding GoogleLoginText}" Command="{x:Binding GoogleLoginCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
