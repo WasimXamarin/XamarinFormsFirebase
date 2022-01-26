@@ -2,13 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-    <key>NSAllowsArbitraryLoadsInWebContent</key>
-     <true/>
-</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>14.4</string>
+	<string>13.6</string>
 	<key>CFBundleDisplayName</key>
 	<string>XamarinFormsFirebase</string>
 	<key>CFBundleIdentifier</key>

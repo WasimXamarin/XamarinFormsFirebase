@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:XamarinFormsFirebase"
              x:Class="XamarinFormsFirebase.Views.AboutPage"
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
@@ -8,16 +9,12 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary>   
             <Color x:Key="Accent">#96d1ff</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <Grid RowDefinitions="Auto, *, *">
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand">
@@ -25,11 +22,34 @@
                 </ContentView>
             </StackLayout>
         </StackLayout>
-        <ScrollView Grid.Row="1">
+        <StackLayout Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
+                <StackLayout>
+                    <control:LabelTypeConverter MyText="{x:Binding SetTextValue}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Entry Placeholder="Type User Name here" Text="{x:Binding UserName}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="{x:Binding ButtonText}" Command="{x:Binding SaveCommand}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="{x:Binding ButtonTextGetData}" Command="{x:Binding GetCommand}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="{x:Binding ButtonTextDeleteData}" Command="{x:Binding DeleteCommand}"/>
+                </StackLayout>
             </StackLayout>
-        </ScrollView>
+        </StackLayout>
+        <CollectionView Grid.Row="2" ItemsSource="{x:Binding myDatabaseRecords}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{x:Binding MyProperty}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 
 </ContentPage>
