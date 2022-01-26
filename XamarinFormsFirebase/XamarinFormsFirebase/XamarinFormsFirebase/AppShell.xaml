@@ -2,6 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:XamarinFormsFirebase.Views"
+       xmlns:Imagelocal="clr-namespace:XamarinFormsFirebase.Views.ImageUploadView"
        Title="XamarinFormsFirebase"
        x:Class="XamarinFormsFirebase.AppShell">
 
@@ -32,6 +33,7 @@
     <TabBar>
         <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
         <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Image Upload" Icon="icon_about" ContentTemplate="{DataTemplate Imagelocal:ImageUploadPage}"/>
     </TabBar>
 
     <!--
