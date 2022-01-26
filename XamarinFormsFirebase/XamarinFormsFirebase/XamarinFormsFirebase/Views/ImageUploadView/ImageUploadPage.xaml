@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsFirebase.Views.ImageUploadView.ImageUploadPage"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    iOS:Page.UseSafeArea="True"
+    Title="{x:Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="{x:Binding Title}"/>
+            </StackLayout>
+            <StackLayout>
+                <Image x:Name="imgChoosed" Source="{x:Binding ImageProfile}" HeightRequest="150"/>
+                <Label x:Name="lblPath" Text="{x:Binding FilePathDisplay}"/>
+            </StackLayout>
+            <StackLayout>
+                <Button x:Name="btnPick" WidthRequest="200" Text="Pick" Command="{x:Binding PickCommand}"/>
+                <Button x:Name="btnUpload" WidthRequest="200" Text="Upload" Command="{x:Binding UploadCommand}"/>
+                <Button x:Name="btnDownload" WidthRequest="200" Text="Download" Command="{x:Binding DownloadCommand}"/>
+                <Button x:Name="btnDelete" WidthRequest="200" Text="Delete" Command="{x:Binding DeleteCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

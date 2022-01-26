@@ -11,6 +11,8 @@
     <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
     <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\RegistrationView\" />
@@ -26,6 +28,11 @@
     <None Remove="Xamarin.Auth" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="AuthHelper\" />
+    <None Remove="Views\ImageUploadView\" />
+    <None Remove="ViewModels\ImageUploadViewModel\" />
+    <None Remove="FirebaseDatabase.net" />
+    <None Remove="FirebaseStorage.net" />
+    <None Remove="Converter\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\RegistrationView\" />
@@ -38,5 +45,8 @@
     <Folder Include="Views\GoogleLoginView\" />
     <Folder Include="ViewModels\GoogleLoginViewModel\" />
     <Folder Include="AuthHelper\" />
+    <Folder Include="Views\ImageUploadView\" />
+    <Folder Include="ViewModels\ImageUploadViewModel\" />
+    <Folder Include="Converter\" />
   </ItemGroup>
 </Project>
