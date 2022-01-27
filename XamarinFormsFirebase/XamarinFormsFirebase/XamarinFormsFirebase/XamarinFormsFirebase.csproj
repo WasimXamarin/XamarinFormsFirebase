@@ -6,13 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
     <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
     <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
     <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
+    <PackageReference Include="Plugin.FirebasePushNotification" Version="3.4.1" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\RegistrationView\" />
@@ -33,6 +35,9 @@
     <None Remove="FirebaseDatabase.net" />
     <None Remove="FirebaseStorage.net" />
     <None Remove="Converter\" />
+    <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="Behavior\" />
+    <None Remove="Plugin.FirebasePushNotification" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\RegistrationView\" />
@@ -48,5 +53,6 @@
     <Folder Include="Views\ImageUploadView\" />
     <Folder Include="ViewModels\ImageUploadViewModel\" />
     <Folder Include="Converter\" />
+    <Folder Include="Behavior\" />
   </ItemGroup>
 </Project>

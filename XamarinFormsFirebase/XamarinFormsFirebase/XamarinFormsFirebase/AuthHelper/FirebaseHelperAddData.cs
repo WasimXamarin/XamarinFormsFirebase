@@ -8,14 +8,15 @@ using XamarinFormsFirebase.Models;
 
 namespace XamarinFormsFirebase.AuthHelper
 {
-    public static class FirebaseHelperAddData
+    public class FirebaseHelperAddData
     {
-        static FirebaseClient firebase = new FirebaseClient("https://fir-xanarinforms-default-rtdb.firebaseio.com/");
+        private readonly string ChildName = "Reords";
+        readonly FirebaseClient firebase = new FirebaseClient("https://fir-xanarinforms-default-rtdb.firebaseio.com/");
 
-        public static async Task<List<MyDatabaseRecord>> GetAllRecords()
+        public async Task<List<MyDatabaseRecord>> GetAllRecords()
         {
             return (await firebase
-              .Child("Reords")
+              .Child(ChildName)
               .OnceAsync<MyDatabaseRecord>()).Select(item => new MyDatabaseRecord
               {
                   MyProperty = item.Object.MyProperty,
@@ -23,10 +24,10 @@ namespace XamarinFormsFirebase.AuthHelper
               }).ToList();
         }
 
-        public static async Task AddReord(string myProperty, string userIdValue)
+        public async Task AddReord(string myProperty, string userIdValue)
         {
             await firebase
-              .Child("Reords")
+              .Child(ChildName)
               .PostAsync(new MyDatabaseRecord()
               {
                   MyProperty = myProperty,
@@ -34,23 +35,23 @@ namespace XamarinFormsFirebase.AuthHelper
               });
         }
 
-        public static async Task<MyDatabaseRecord> GetReord(string userIdValue)
+        public async Task<MyDatabaseRecord> GetReord(string userIdValue)
         {
             var allRecords = await GetAllRecords();
             await firebase
-              .Child("Reords")
+              .Child(ChildName)
               .OnceAsync<MyDatabaseRecord>();
             return allRecords.Where(a => a.UserIdValue == userIdValue).FirstOrDefault();
         }
 
-        public static async Task UpdateReord(string userIdValue, string myProperty)
+        public async Task UpdateReord(string userIdValue, string myProperty)
         {
             var toUpdateRecords = (await firebase
-              .Child("Reords")
+              .Child(ChildName)
               .OnceAsync<MyDatabaseRecord>()).Where(a => a.Object.UserIdValue == userIdValue).FirstOrDefault();
 
             await firebase
-              .Child("Reords")
+              .Child(ChildName)
               .Child(toUpdateRecords.Key)
               .PutAsync(new MyDatabaseRecord()
               {
@@ -59,12 +60,12 @@ namespace XamarinFormsFirebase.AuthHelper
               });
         }
 
-        public static async Task DeleteReord(string userIdValue)
+        public async Task DeleteReord(string userIdValue)
         {
             var toDeleteRecord = (await firebase
-              .Child("Reords")
+              .Child(ChildName)
               .OnceAsync<MyDatabaseRecord>()).Where(a => a.Object.UserIdValue == userIdValue).FirstOrDefault();
-            await firebase.Child("Reords").Child(toDeleteRecord.Key).DeleteAsync();
+            await firebase.Child(ChildName).Child(toDeleteRecord.Key).DeleteAsync();
         }
     }
 }
