@@ -18,6 +18,7 @@ namespace XamarinFormsFirebase.ViewModels
 		public Command GetCommand { get; }
 		public Command DeleteCommand { get; }
 		private IFirebaseAuth firebaseAuth;
+		private FirebaseHelperAddData firebaseHelperAddData;
 		public string UserId;
 		public AboutViewModel()
 		{
@@ -30,11 +31,12 @@ namespace XamarinFormsFirebase.ViewModels
 			UserIdLoad();
 			SetTextValue = "1";
 			UserId = firebaseAuth.GetUserId();
+			firebaseHelperAddData = new FirebaseHelperAddData();
 		}
 
         private async void OnDeleteClicked(object obj)
         {
-			var existRecord = await FirebaseHelperAddData.GetReord(UserId);
+			var existRecord = await firebaseHelperAddData.GetReord(UserId);
 
 			if (existRecord == null)
 			{
@@ -42,14 +44,14 @@ namespace XamarinFormsFirebase.ViewModels
 			}
 			else
 			{
-				await FirebaseHelperAddData.DeleteReord(UserId);
+				await firebaseHelperAddData.DeleteReord(UserId);
 			}
 			DisplayAllDataOnList();
 		}
 
         private async void OnGetClicked(object obj)
         {
-			var singleRecord = await FirebaseHelperAddData.GetReord(UserId);
+			var singleRecord = await firebaseHelperAddData.GetReord(UserId);
 			if(singleRecord == null)
             {
 				ToastClass.RedMessageMethod("No Record Found");
@@ -62,22 +64,22 @@ namespace XamarinFormsFirebase.ViewModels
 
 		private async void OnSaveClicked(object obj)
         {
-			var existRecord = await FirebaseHelperAddData.GetReord(UserId);
+			var existRecord = await firebaseHelperAddData.GetReord(UserId);
 
 			if(existRecord == null)
 			{
-				await FirebaseHelperAddData.AddReord(UserName, UserId);
+				await firebaseHelperAddData.AddReord(UserName, UserId);
 			}
 			else
 			{
-				await FirebaseHelperAddData.UpdateReord(UserId, UserName);
+				await firebaseHelperAddData.UpdateReord(UserId, UserName);
 			}
 			DisplayAllDataOnList();
 		}
 
 		public async void DisplayAllDataOnList()
         {
-			var allPersons = await FirebaseHelperAddData.GetAllRecords();
+			var allPersons = await firebaseHelperAddData.GetAllRecords();
 			myDatabaseRecords = allPersons;
 		}
 

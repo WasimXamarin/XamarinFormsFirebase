@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:control="clr-namespace:XamarinFormsFirebase"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="XamarinFormsFirebase.Views.AboutPage"
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
@@ -28,7 +29,11 @@
                     <control:LabelTypeConverter MyText="{x:Binding SetTextValue}"/>
                 </StackLayout>
                 <StackLayout>
-                    <Entry Placeholder="Type User Name here" Text="{x:Binding UserName}"/>
+                    <Entry Text="{x:Binding UserName}">
+                        <Entry.Behaviors>
+                            <xct:MaskedBehavior Mask="XX-XX-XX-XX-XX" UnMaskedCharacter="X" />
+                        </Entry.Behaviors>
+                    </Entry>
                 </StackLayout>
                 <StackLayout>
                     <Button Text="{x:Binding ButtonText}" Command="{x:Binding SaveCommand}"/>
